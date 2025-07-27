@@ -26,15 +26,7 @@ target_metadata = metadata
 
 config.set_main_option("sqlalchemy.url", str(settings.DATABASE_URL))
 
-# other values from the config, defined by the needs of env.py,
-# can be acquired:
-# my_important_option = config.get_main_option("my_important_option")
-# ... etc.
 
-# def include_object(object, name, type_, reflected, compare_to):
-#     if type_ == "table":
-#         return object.schema == "ticket"
-#     return True
 
 
 def run_migrations_offline() -> None:
@@ -78,9 +70,6 @@ def run_migrations_online() -> None:
         context.configure(
             connection=connection,
             target_metadata=target_metadata,
-            # include_schemas=True,
-            # include_object=include_object,
-            # version_table_schema="ticket",
         )
 
         with context.begin_transaction():
