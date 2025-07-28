@@ -15,8 +15,8 @@ services:
         - .env
       volumes:
         - ./src:/app/src
-      ports:
-        - "8010:8000"
+      expose:
+        - 8000
       command: uvicorn src.main:app --proxy-headers --forwarded-allow-ips=* --host 0.0.0.0 --reload --port 8000
 
 volumes:

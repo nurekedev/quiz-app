@@ -10,22 +10,33 @@ from src.exceptions import *
 
 from src.quiz.schemas import *
 from src.quiz.exceptions import *
+from src.quiz.service import *
 from src.quiz.dependencies import PaginationDep
-from src.quiz.service import QuizService, QuestionService, QuizResultService
+
 
 
 from src.auth.dependencies import (
     UserDep,
+    AdminDep
 )
 
 
 quiz_router = APIRouter(tags=["quiz"], prefix="/quizzes")
 
+@quiz_router.get(
+    "/tags", status_code=status.HTTP_200_OK
+)
+async def get_tag_list(
+    db: DBSessionDep,
+    pg_dep: PaginationDep,
+):
+    return await TagService.get_all(db, pg_dep)
 
 @quiz_router.post(
     "/", status_code=status.HTTP_201_CREATED, response_model=QuizBaseSchema
 )
 async def create_quiz(
+    admin_dep: AdminDep,
     db: DBSessionDep,
     quiz_data: QuizCreate,
 ):

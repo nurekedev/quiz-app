@@ -1,4 +1,4 @@
-from typing import Any, Optional, Union
+from typing import Any
 from fastapi import BackgroundTasks
 from fastapi_mail import (
     FastMail,

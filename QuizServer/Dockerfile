@@ -23,3 +23,4 @@ RUN uv sync --no-dev --no-install-project
 
 ENV PATH="/app/.venv/bin:$PATH"
 ENV PYTHONPATH=/app
+
