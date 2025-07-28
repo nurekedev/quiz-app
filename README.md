@@ -28,7 +28,7 @@ Swagger Backend API: nginx-прокси на http://91.103.107.134/docs/
 
 ## Data Model (ER Diagram)
 
-![ER Diagram](./er.jpg)
+![ER Diagram](ER.jpg)
 
 - **Quiz** — Тест, содержит вопросы, связанные с тегами.
 - **Question** — Вопрос теста, связан с Quiz, содержит варианты ответа.
