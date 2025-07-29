@@ -1,0 +1,76 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["**"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noUnusedTemplateLiteral": "error",
+				"useExportType": "error",
+				"useImportType": "error",
+				"useConsistentArrayType": "error",
+				"useDefaultParameterLast": "error",
+				"useFragmentSyntax": "error",
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			},
+			"correctness": {
+				"noUnusedVariables": "error",
+				"noUnusedImports": "error",
+				"noUnreachable": "error",
+				"useExhaustiveDependencies": "error",
+				"useJsxKeyInIterable": "error",
+				"useHookAtTopLevel": "error",
+				"noVoidElementsWithChildren": "error",
+				"useValidTypeof": "error"
+			},
+			"suspicious": {
+				"noDoubleEquals": "error",
+				"noThenProperty": "error",
+				"noExplicitAny": "error",
+				"noCommentText": "error"
+			},
+			"complexity": {
+				"noBannedTypes": "error",
+				"useLiteralKeys": "error",
+				"noUselessFragments": "error"
+			},
+			"a11y": {
+				"useButtonType": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"bracketSpacing": true,
+			"quoteProperties": "asNeeded",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		},
+		"linter": {
+			"enabled": true
+		}
+	}
+}
